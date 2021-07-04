@@ -1,4 +1,4 @@
-function DataValidator(check = "body",schema) {
+function DataValidator(check = "query",schema) {
     return (req, res, next) => {
         var data = req[check]
         const { error, value } = schema.validate(data)
